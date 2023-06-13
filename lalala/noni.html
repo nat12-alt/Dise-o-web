@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    /* Estilos del contenedor principal */
+    .contenedor {
+      display: flex;
+    }
+
+    /* Estilos del menú */
+    .menu {
+      background-color: #797979;
+      width: 222px;
+      height: 700px;
+      float: left;
+      padding: 20px;
+      width: 200px;
+      height :700px;
+    }
+    
+    .menu ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    
+    .menu li {
+      margin-bottom: 5px;
+    }
+    
+    .menu li a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .menu li a:hover {
+      background-color: #ada6a6;
+    }
+    
+    /* Estilos del contenedor del formulario */
+    .formulario {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #cccccc;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      margin-left: 20px;
+      width: 200px; 
+      height: 550px;
+    }
+    
+    /* Estilos de los campos del formulario */
+    .formulario label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    .formulario input[type="text"],
+    .formulario textarea,
+    .formulario select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #c2c2c2;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Estilos para los campos en forma horizontal */
+    .formulario .campos-linea {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .formulario .campos-linea label {
+      flex: 0 0 150px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    .formulario .campos-linea input[type="text"],
+    .formulario .campos-linea textarea {
+      flex: 1;
+    }
+    
+    /* Estilos del botón de guardar */
+    .formulario button {
+      width: 70%;
+      padding: 10px;
+      background-color: #333333;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    
+    .formulario button:hover {
+      background-color: #555555;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="menu">
+      <ul>
+        <h2 style="color: #ffffff; text-align: center; margin-top: 30px;">INVENTARIO 
+          <img src="https://leben.com.co/img/logos/logo-illustrator.png" alt="" width="40" height="30"></h2>
+        <br>
+        <br>
+        <li style="text-align: center;"><a href="#">Crear Categoria</a></li>
+        <li style="text-align: center;"><a href="#">Añadir Producto</a></li>
+        <li style="text-align: center;"><a href="#">Inhabilitar Producto</a></li>
+        <li style="text-align: center;"><a href="#">Consultar Inventario</a></li>
+      </ul>
+    </div>
+
+    <div class="formulario">
+      <h2>Registro de Producto</h2>
+      <form>
+        <label for="categoria">Categoría:</label>
+        <select id="categoria"> 
+          <option value="electronica">Zapatos</option>
+          <option value="ropa">Pantalones</option>
+          <option value="alimentos">Camisas</option>
+          <option value="herramientas">Maletas</option>
+          <option value="hogar">Canguros</option>
+          <option value="juguetes">Medias</option>
+          <option value="libros">jiji</option>
+          <option value="deportes">jojooj</option>
+        </select>
+        
+        <div class="campos-linea">
+          <label for="referencia">Referencia:</label>
+          <input type="text" id="referencia" placeholder="Ingrese la referencia">
+        </div>
+        
+        <div class="campos-linea">
+          <label for="entrada">Entrada:</label>
+          <input type="text" id="entrada" placeholder="Ingrese la entrada del producto"> 
+        </div>
+        
+        <div class="campos-linea">
+          <label for="proveedor">Proveedor:</label>
+          <input type="text" id="proveedor" placeholder="Ingrese el proveedor">
+        </div>
+        
+        <div class="campos-linea">
+          <label for="defecto">Defecto:</label>
+          <textarea id="defecto" placeholder="Ingrese algún defecto"></textarea>
+        </div>
+        
+        <label for="salida">Salida:</label>
+        <textarea id="salida" placeholder="Ingrese la salida"></textarea>
+        
+        <button type="submit">Guardar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
